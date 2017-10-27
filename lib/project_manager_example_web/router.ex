@@ -19,8 +19,10 @@ defmodule ProjectManagerExampleWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ProjectManagerExampleWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", ProjectManagerExampleWeb do
+    pipe_through :api
+
+    resources "/projects", ProjectController, only: [:index, :show]
+    resources "/documents", DocumentController, only: [:index, :show]
+  end
 end

@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "id": "cool-project",
+      "title": "Super Cool Project",
+      "description": "This project is best known for being super cool and awesome"
+    },
+    {
+      "id": "kinda-cool-project",
+      "title": "Kinda Cool Project",
+      "description": "This project is best known for being moderately cool and not at all awesome"
+    },
+    {
+      "id": "lame-project",
+      "title": "Lamest Project",
+      "description": "This project is the worst. If you are on this project, you did something wrong"
+    }
+  ]
+}
