@@ -114,7 +114,9 @@ defmodule ProjectManagerExample.Management do
 
   """
   def list_documents do
-    Repo.all(Document)
+    Document
+    |> Ecto.Query.preload([:project])
+    |> Repo.all()
   end
 
   @doc """
@@ -131,7 +133,11 @@ defmodule ProjectManagerExample.Management do
       ** (Ecto.NoResultsError)
 
   """
-  def get_document!(id), do: Repo.get!(Document, id)
+  def get_document!(id) do
+    Document
+    |> Ecto.Query.preload([:project])
+    |> Repo.get!(id)
+  end
 
   @doc """
   Creates a document.
