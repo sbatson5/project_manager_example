@@ -38,6 +38,8 @@ defmodule ProjectManagerExampleWeb.Endpoint do
     key: "_project_manager_example_key",
     signing_salt: "WfisG4us"
 
+  plug CORSPlug, origin: ["http://localhost:4200"]
+
   plug ProjectManagerExampleWeb.Router
 
   @doc """

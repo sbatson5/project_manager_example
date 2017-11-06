@@ -29,5 +29,6 @@ defmodule ProjectManagerExampleWeb.Router do
 
     resources "/projects", ProjectController, only: [:index, :show]
     resources "/documents", DocumentController, only: [:index, :show]
+    resources "/auth", UserController, only: [:create]
   end
 end

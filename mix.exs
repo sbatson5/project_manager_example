@@ -41,7 +41,10 @@ defmodule ProjectManagerExample.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:ja_serializer, github: "vt-elixir/ja_serializer"}
+      {:ja_serializer, github: "vt-elixir/ja_serializer"},
+      {:oauth2, "~> 0.9.0"},
+      {:httpoison, "0.13.0", override: true},
+      {:cors_plug, "~> 1.2"}
     ]
   end
 
