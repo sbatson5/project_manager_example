@@ -6,8 +6,8 @@ defmodule ProjectManagerExampleWeb.DocumentController do
 
   action_fallback ProjectManagerExampleWeb.FallbackController
 
-  def index(conn, _params) do
-    documents = Management.list_documents()
+  def index(conn, params) do
+    documents = Management.list_documents(params)
     render(conn, "index.json-api", data: documents)
   end
 

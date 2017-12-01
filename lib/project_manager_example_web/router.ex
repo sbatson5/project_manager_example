@@ -18,16 +18,11 @@ defmodule ProjectManagerExampleWeb.Router do
     plug JaSerializer.Deserializer
   end
 
-  scope "/", ProjectManagerExampleWeb do
-    pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
-  end
-
   scope "/api", ProjectManagerExampleWeb do
     pipe_through :json_api
 
     resources "/projects", ProjectController, only: [:index, :show]
     resources "/documents", DocumentController, only: [:index, :show]
+    resources "/users", UserController, only: [:index, :show]
   end
 end
